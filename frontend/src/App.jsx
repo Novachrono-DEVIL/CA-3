@@ -4,6 +4,13 @@ import Navigation from './components/Navigation';
 import EventForm from './components/EventForm';
 import EventList from './components/EventList';
 import EventItem from './components/EventItem';
+import { useState } from 'react';
+import './App.css'
+
+  
+
+
+
 
 
 const App = () => {
@@ -19,4 +26,13 @@ const App = () => {
   );
 };
 
+return (
+  <>
+  {
+    data.map((item,ind)=>
+      <EventForm key={ind} {...item}/>
+    )
+  }
+  </>
+)
 export default App;
